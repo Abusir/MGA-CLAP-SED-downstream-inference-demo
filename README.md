@@ -20,8 +20,7 @@ Using the `example.wav` file from the official repository, you can reproduce res
 
 ## Notes
 
-This implementation **follows the zero-shot inference strategy** used in  
-[Microsoft CLAP](https://github.com/microsoft/CLAP) on the **ESC-50 dataset**.  
+This implementation **follows the zero-shot inference strategy** used in [Microsoft CLAP](https://github.com/microsoft/CLAP) on the **ESC-50 dataset**.  
 Specifically, the model uses a `softmax` function over class similarities to compute class probabilities.  
 
 As a result, when multiple sound events overlap within the same audio segment, the probabilities are mutually normalized, which may lead to **inaccurate class estimation for weaker events**—a limitation consistent with both the original MGA-CLAP paper and prior CLAP implementations.
